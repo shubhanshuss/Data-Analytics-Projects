@@ -1,58 +1,72 @@
-## Sales Insights Data Analysis Project
+# Sales Insights Data Analysis Project
 
-### Instructions to setup mysql on your local computer
+### Introduction
 
-1. Follow step in this video to install mysql on your local computer
-https://www.youtube.com/watch?v=WuBcTJnIuzo
+This project is designed to simulate a real-world data analysis scenario aimed at generating actionable sales insights for AtliQ Hardware, a computer hardware manufacturer. The project is ideal for aspiring data analysts and data scientists to gain practical exposure to data analytics workflows, project management methodologies, and corporate problem-solving techniques.
 
-1. SQL database dump is in db_dump.sql file above. Download `db_dump.sql` file to your local computer and import it as per instructions given in the tutorial video
+This project was completed as part of an assisted learning program, following a step-by-step guide from a YouTube tutorial. It provided an excellent opportunity to apply theoretical knowledge in a guided, practical context.
 
-### Data Analysis Using SQL
+The end goal is to create a Power BI dashboard that provides detailed sales insights, empowering stakeholders to make data-driven decisions to enhance business performance.
 
-1. Show all customer records
+### Problem Statement
 
-    `SELECT * FROM customers;`
+AtliQ Hardware, headquartered in Delhi, India, supplies computer hardware to various clients, including Excel Stores across India. However, the sales director, Bhavin Patel, faces significant challenges:
 
-1. Show total number of customers
+1. Difficulty tracking sales trends in a dynamically evolving market.
 
-    `SELECT count(*) FROM customers;`
+2. Inconsistent and often overly optimistic verbal reports from regional managers.
 
-1. Show transactions for Chennai market (market code for chennai is Mark001
+3. Excessive manual work involving multiple Excel files for consolidating sales data.
 
-    `SELECT * FROM transactions where market_code='Mark001';`
+4. Lack of centralized, easily interpretable insights for quick decision-making.
 
-1. Show distrinct product codes that were sold in chennai
+Objective: To provide Bhavin Patel with a centralized dashboard that offers real-time, accurate, and visually intuitive insights into sales performance across regions, products, and timelines.
 
-    `SELECT distinct product_code FROM transactions where market_code='Mark001';`
+### Data Workflow and Tools
 
-1. Show transactions where currency is US dollars
+1. Data Sources
 
-    `SELECT * from transactions where currency="USD"`
+- Sales Management System: Records sales transactions.
 
-1. Show transactions in 2020 join by date table
+- Supplementary Data: Additional details like product codes and regional sales data.
 
-    `SELECT transactions.*, date.* FROM transactions INNER JOIN date ON transactions.order_date=date.date where date.year=2020;`
+2. Data Wrangling in Power BI
 
-1. Show total revenue in year 2020,
+- Clean and merge datasets.
 
-    `SELECT SUM(transactions.sales_amount) FROM transactions INNER JOIN date ON transactions.order_date=date.date where date.year=2020 and transactions.currency="INR\r" or transactions.currency="USD\r";`
-	
-1. Show total revenue in year 2020, January Month,
+- Perform transformations like currency conversion and filtering irrelevant columns.
 
-    `SELECT SUM(transactions.sales_amount) FROM transactions INNER JOIN date ON transactions.order_date=date.date where date.year=2020 and and date.month_name="January" and (transactions.currency="INR\r" or transactions.currency="USD\r");`
+### SQL Queries for Data Analysis
 
-1. Show total revenue in year 2020 in Chennai
+To prepare the data for visualization, the following SQL queries are used:
 
-    `SELECT SUM(transactions.sales_amount) FROM transactions INNER JOIN date ON transactions.order_date=date.date where date.year=2020
-and transactions.market_code="Mark001";`
+1. Show all customer records:  
+   SELECT * FROM customers;
 
+2. Count total customers:  
+   SELECT count(*) FROM customers;
 
-Data Analysis Using Power BI
-============================
+3. Transactions for Chennai market:   
+   SELECT * FROM transactions WHERE market_code='Mark001';
 
-1. Formula to create norm_amount column
+4. Distinct products sold in Chennai:    
+   SELECT DISTINCT product_code FROM transactions WHERE market_code='Mark001';
 
-`= Table.AddColumn(#"Filtered Rows", "norm_amount", each if [currency] = "USD" or [currency] ="USD#(cr)" then [sales_amount]*75 else [sales_amount], type any)`
+5. Transactions in USD currency:    
+   SELECT * FROM transactions WHERE currency="USD";
 
-
-
+6. Total revenue in 2020:    
+   SELECT SUM(transactions.sales_amount)    
+   FROM transactions    
+   INNER JOIN date     
+   ON transactions.order_date=date.date     
+   WHERE date.year=2020     
+   AND (transactions.currency="INR" OR transactions.currency="USD");
+     
+8. Total revenue in Chennai for 2020:   
+   SELECT SUM(transactions.sales_amount)   
+   FROM transactions  
+   INNER JOIN date   
+   ON transactions.order_date=date.date    
+   WHERE date.year=2020   
+   AND transactions.market_code="Mark001";   
