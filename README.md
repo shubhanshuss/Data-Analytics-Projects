@@ -41,22 +41,22 @@ Objective: To provide Bhavin Patel with a centralized dashboard that offers real
 To prepare the data for visualization, the following SQL queries are used:
 
 1. Show all customer records:  
-   SELECT * FROM customers;
+   ```SELECT * FROM customers;```
 
 2. Count total customers:  
-   SELECT count(*) FROM customers;
+   ```SELECT count(*) FROM customers;```
 
 3. Transactions for Chennai market:   
-   SELECT * FROM transactions WHERE market_code='Mark001';
+   ```SELECT * FROM transactions WHERE market_code='Mark001';```
 
 4. Distinct products sold in Chennai:    
-   SELECT DISTINCT product_code FROM transactions WHERE market_code='Mark001';
+   ```SELECT DISTINCT product_code FROM transactions WHERE market_code='Mark001';```
 
 5. Transactions in USD currency:    
-   SELECT * FROM transactions WHERE currency="USD";
+   ```SELECT * FROM transactions WHERE currency="USD";```
 
 6. Total revenue in 2020:    
-   SELECT SUM(transactions.sales_amount)    
+   ```SELECT SUM(transactions.sales_amount)    
    FROM transactions    
    INNER JOIN date     
    ON transactions.order_date=date.date     
@@ -64,8 +64,8 @@ To prepare the data for visualization, the following SQL queries are used:
    AND (transactions.currency="INR" OR transactions.currency="USD");
      
 8. Total revenue in Chennai for 2020:   
-   SELECT SUM(transactions.sales_amount)   
-   FROM transactions  
+   ```SELECT SUM(transactions.sales_amount)   
+   FROM transactions
    INNER JOIN date   
    ON transactions.order_date=date.date    
    WHERE date.year=2020   
