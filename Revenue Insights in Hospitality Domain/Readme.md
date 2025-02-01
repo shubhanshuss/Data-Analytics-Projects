@@ -56,6 +56,16 @@ The Power BI dashboard includes the following features:
 5. **Dashboard Creation**: Build the dashboard with visuals, filters, and KPIs.
 6. **Stakeholder Feedback**: Present the dashboard to stakeholders and incorporate feedback.
 
+![Dashboard](https://github.com/user-attachments/assets/6e51c949-a2b2-4bb7-a57a-6f1b31088f64)
+
+Here is how tooltip is incorporated in keyinsights:
+![Dashboard with Tooltip](https://github.com/user-attachments/assets/e374000b-94e3-4f56-8295-605f4e69490c)
+
+Here's a screenshot of a tooltip, all the tooltips and constructed similarly:
+![Tooltip 1](https://github.com/user-attachments/assets/bbc76b42-75cd-4268-af4b-a07d7c89e8d7)
+
+
+
 ---
 
 ## Key Insights
