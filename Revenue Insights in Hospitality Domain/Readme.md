@@ -23,7 +23,6 @@ The dashboard focuses on the following key metrics:
 
 ## Tools Used
 - **Power BI**: For data visualization and dashboard creation.
-- **SQL**: For data extraction and manipulation.
 - **Excel**: For initial data exploration and cleaning.
 
 ---
@@ -56,6 +55,9 @@ The Power BI dashboard includes the following features:
 5. **Dashboard Creation**: Build the dashboard with visuals, filters, and KPIs.
 6. **Stakeholder Feedback**: Present the dashboard to stakeholders and incorporate feedback.
 
+---
+
+## **Screenshots**
 ![Dashboard](https://github.com/user-attachments/assets/6e51c949-a2b2-4bb7-a57a-6f1b31088f64)
 
 Here is how tooltip is incorporated in keyinsights:
@@ -63,8 +65,6 @@ Here is how tooltip is incorporated in keyinsights:
 
 Here's a screenshot of a tooltip, all the tooltips and constructed similarly:
 ![Tooltip 1](https://github.com/user-attachments/assets/bbc76b42-75cd-4268-af4b-a07d7c89e8d7)
-
-
 
 ---
 
@@ -84,12 +84,15 @@ Here's a screenshot of a tooltip, all the tooltips and constructed similarly:
 ---
 
 ## Conclusion
-This project provides a hands-on experience in data analytics using Power BI. By working on this project, you will learn how to transform data, create dashboards, and generate actionable insights for business stakeholders. The exercise at the end of the project will help you apply what you've learned and showcase your skills on LinkedIn.
-
+- Gained hands-on experience in data cleaning, transformation, and visualization using Power BI.
+- Learned how to create calculated columns and measures using DAX.
+- Developed skills in building interactive dashboards that cater to business needs.
+- Understood the importance of stakeholder feedback in refining analytics solutions.
+  
 ---
 
 ## Acknowledgments
-Special thanks to the CodeBasics team for providing the dataset and guidance for this project. This project was completed as part of a guided learning program, aimed at developing practical data analytics skills.
+Special thanks to the CodeBasics team for providing the dataset and guidance for this project.
 
 ---
 
