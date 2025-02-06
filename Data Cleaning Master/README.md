@@ -1,7 +1,8 @@
 # Data Cleaning Master - Python Application
 
 ## Project Overview
-![](https://github.com/najirh/Python-Data-Cleaning---P1/blob/main/DALL·E%202024-10-03%2023.49.37%20-%20A%20realistic%20landscape%20image%20showing%20a%20modern%20workspace%20with%20a%20laptop%20on%20a%20desk.%20The%20laptop%20is%20displaying%20Python%20code%20related%20to%20a%20data%20cleaning%20automa.webp)
+![image](https://github.com/user-attachments/assets/838f0ba2-e5d8-405a-aca3-961d680abf6c)
+
 
 The **Data Cleaning Master** is a Python application designed to efficiently clean datasets by handling duplicates, missing values, and providing cleaned output within seconds. The application is user-friendly, highly performant, and has been tested on various datasets, ensuring smooth execution and accuracy.
 
